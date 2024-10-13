@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knimeNode icon="./default.png" type="Manipulator" xmlns="http://knime.org/node/v2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://knime.org/node/v2.10 http://knime.org/node/v2.10.xsd">
+    <name>Quantity Center</name>
+    
+    <shortDescription>
+        Quantity Center of Material Flow Cost Accounting (MFCA)
+    </shortDescription>
+    
+    <fullDescription>
+        <intro>Material Flow Cost Accounting (MFCA) originated in Germany in the 1990s as a management tool that examines the environmental impact and cost of resource flows in production processes. It aims to reduce resource usage, save production costs, and minimize unnecessary waste by analyzing inputs and outputs. In 2011, it became an international standard (ISO 14051) after gaining widespread adoption in Japan. MFCA quantifies process outputs in monetary terms to identify areas for improvement and cost reduction, making it a powerful tool for organizations to balance economic and environmental considerations while promoting green supply chains and products.</intro>
+        
+        <tab name="Quantity Center Settings">
+            <option name="Material Inputs">Materials required for production, including material name, weight, calculation unit and unit price.</option>
+            <option name="Energy Costs">The energy used in the production process can generally be considered to be calculated in kwh.</option>
+            <option name="System Costs">System costs include manpower, equipment depreciation, information systems, outsourcing, etc.</option>
+            <option name="Waste Management">The cost of waste disposal mainly includes the item, weight, and unit price of the waste. If the cost of waste disposal can be sold, the unit price part can be expressed as a negative number.</option>
+            <option name="Product Outputs">Production output is the number of positive output and negative losses in this production operation. The unit price entered here is the selling price or valuation result of the finished product or semi-finished product.</option>
+        </tab>
+    </fullDescription>
+    
+    <ports>
+        <inPort index="0" name="Material Input">The material input port. The data source must have “part_no,” “part_name,” “unit,” “unit_price,” and “quantity” columns. </inPort>
+        <!-- possibly more input ports here-->
+        <outPort index="0" name="Positive Output">Get the positive production outputs; this data could be the input of the following process.</outPort>
+        <outPort index="1" name="Negative Loss">This port outputs the negative loss of MFCA calculation.</outPort>
+        <outPort index="2" name="Calculation">Get the calculation results, such as total production output, loss, and cost.</outPort>
+        <outPort index="3" name="Raw Data">To obtain the raw data from node settings, including material input, production output, loss and costs.</outPort>
+        <!-- possibly more output ports here-->
+    </ports>
+</knimeNode>

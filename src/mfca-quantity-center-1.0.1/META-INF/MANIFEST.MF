@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: QuantityCenter-Node extension for KNIME Workbench
+Bundle-SymbolicName: org.greenopendata; singleton:=true
+Bundle-Version: 1.0.1.beta
+Bundle-ClassPath: quantitycenter.jar,
+ libs/mfca-commons-1.0.0.jar
+Bundle-Activator: org.greenopendata.node.mfca.qc.QuantityCenterNodePlugin
+Bundle-Vendor: Green Open Data
+Require-Bundle: org.eclipse.core.runtime,
+ org.knime.workbench.core,
+ org.knime.workbench.repository,
+ org.knime.base
+Bundle-ActivationPolicy: lazy
+Export-Package: org.greenopendata.node.mfca.qc
+

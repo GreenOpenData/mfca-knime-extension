@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.knime.workbench.repository.categories">
+      <category
+            description="Green Open Data - MFCA Operation Nodes"
+            icon="icon/default.png"
+            level-id="greenopendata"
+            name="MFCA"
+            path="/"/>
+   </extension>
+   
+   <extension
+         point="org.knime.workbench.repository.nodes">
+      <node
+            category-path="/greenopendata"
+            icon="icon/default.png"
+            factory-class="org.greenopendata.node.mfca.qc.QuantityCenterNodeFactory"
+            id="org.greenopendata.QuantityCenterNodeFactory"/>
+   </extension>
+   
+</plugin>
